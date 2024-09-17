@@ -1,5 +1,6 @@
 import pool from '../src/db';
 
+// view all departments = formatted table showing department names and department ids
 export const viewDepartments = async () => {
     try {
         const res = await pool.query('SELECT * FROM department');
@@ -8,6 +9,8 @@ export const viewDepartments = async () => {
         console.error('Error viewing departments:', err);
     }
 };
+
+// view all roles =  job title, role id, the department that role belongs to, and the salary for that role
 export const viewRoles = async () => {
     try {
         const res = await pool.query(
@@ -20,6 +23,8 @@ export const viewRoles = async () => {
         console.error('Error viewing roles:', err);
     }
 };
+
+// view employees = formatted table showing employee data, including employee ids, first names, last names, job titles, departments, salaries, and managers that the employees report to
 export const viewEmployees = async () => {
     try {
         const res = await pool.query(

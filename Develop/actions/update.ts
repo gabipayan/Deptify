@@ -2,6 +2,7 @@
 import inquirer from 'inquirer';
 import pool from '../src/db';
 
+// When choose to update an employee role = prompted to select an employee to update and their new role and this information is updated in the database 
 export const updateEmployeeRole = async () => {
     const employees = await pool.query('SELECT * FROM employee');
     const employeeChoices = employees.rows.map(emp => ({

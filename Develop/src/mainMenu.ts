@@ -14,9 +14,9 @@ export const mainMenu = async () => {
                 'View all roles',
                 'View all employees',
                 'Add a department',
-                'Add a Role',
-                'Add an Employee',
-                'Update an Employee Role',
+                'Add a role',
+                'Add an employee',
+                'Update an employee role',
                 'Exit',
             ],
         },
@@ -38,10 +38,10 @@ export const mainMenu = async () => {
             case 'Add a role':
                 await addRole();
                 break;
-                case 'Add a an Employee':
+                case 'Add an employee':
             await addEmployee();
             break;
-        case 'Update an Employee Role':
+        case 'Update an employee role':
             await updateEmployeeRole();
             break;
             default:
